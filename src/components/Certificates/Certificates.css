@@ -1,0 +1,375 @@
+/* =========================================================
+   CERTIFICATES — EDITORIAL ARCHIVE
+========================================================= */
+
+.certificates-section {
+  padding: 115px 0 125px;
+
+  background: var(--bg, #faf8f5);
+
+  color: var(--text, #17151b);
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.certificates-header {
+  max-width: 700px;
+
+  padding-bottom: 42px;
+
+  border-bottom:
+    1px solid rgba(23, 21, 27, 0.15);
+}
+
+.certificates-header h2 {
+  margin: 0;
+
+  color: #17151b;
+
+  font-family:
+    "Playfair Display",
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: clamp(45px, 5vw, 70px);
+
+  font-weight: 500;
+
+  line-height: 0.95;
+
+  letter-spacing: -0.05em;
+}
+
+.certificates-header p {
+  max-width: 510px;
+
+  margin: 18px 0 0;
+
+  color: #68636f;
+
+  font-family:
+    Inter,
+    "DM Sans",
+    Arial,
+    sans-serif;
+
+  font-size: 12px;
+
+  line-height: 1.7;
+}
+
+
+/* =========================================================
+   ARCHIVE
+========================================================= */
+
+.certificates-list {
+  border-bottom:
+    1px solid rgba(23, 21, 27, 0.15);
+}
+
+
+/* =========================================================
+   CERTIFICATE ROW
+========================================================= */
+
+.certificate-row {
+  display: grid;
+
+  grid-template-columns:
+    75px
+    minmax(0, 1fr)
+    100px
+    80px;
+
+  align-items: center;
+
+  gap: 25px;
+
+  min-height: 105px;
+
+  padding: 22px 0;
+
+  border-bottom:
+    1px solid rgba(23, 21, 27, 0.1);
+}
+
+.certificate-row:last-child {
+  border-bottom: 0;
+}
+
+
+/* =========================================================
+   YEAR
+========================================================= */
+
+.certificate-year {
+  color: #77727d;
+
+  font-family:
+    Inter,
+    "DM Sans",
+    Arial,
+    sans-serif;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.08em;
+}
+
+
+/* =========================================================
+   TITLE
+========================================================= */
+
+.certificate-title h3 {
+  margin: 0;
+
+  color: #17151b;
+
+  font-family:
+    "Playfair Display",
+    Georgia,
+    serif;
+
+  font-size: 20px;
+
+  font-weight: 500;
+
+  line-height: 1.15;
+}
+
+.certificate-title span {
+  display: block;
+
+  margin-top: 7px;
+
+  color: var(--accent-dark);
+
+  font-family:
+    Inter,
+    "DM Sans",
+    Arial,
+    sans-serif;
+
+  font-size: 8px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.1em;
+}
+
+
+/* =========================================================
+   CERTIFIED MARK
+========================================================= */
+
+.certificate-mark {
+  color: #77727d;
+
+  font-family:
+    Inter,
+    "DM Sans",
+    Arial,
+    sans-serif;
+
+  font-size: 7px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.13em;
+
+  text-align: center;
+}
+
+
+/* =========================================================
+   VIEW
+========================================================= */
+
+.certificate-view {
+  justify-self: end;
+
+  padding: 0;
+
+  border: 0;
+
+  border-bottom:
+    1px solid rgba(23, 21, 27, 0.3);
+
+  background: transparent;
+
+  color: #17151b;
+
+  font-family:
+    Inter,
+    "DM Sans",
+    Arial,
+    sans-serif;
+
+  font-size: 8px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.08em;
+
+  cursor: pointer;
+
+  padding-bottom: 4px;
+
+  transition:
+    color 200ms ease,
+    border-color 200ms ease;
+}
+
+.certificate-view:hover {
+  color: var(--accent-dark);
+
+  border-color: var(--accent-dark);
+}
+
+
+/* =========================================================
+   LEARNING NOTE
+========================================================= */
+
+.learning-note {
+  display: grid;
+
+  grid-template-columns:
+    0.7fr
+    1.3fr;
+
+  gap: 40px;
+
+  margin-top: 40px;
+
+  padding-top: 30px;
+
+  border-top:
+    1px solid rgba(23, 21, 27, 0.1);
+}
+
+.learning-note > span {
+  color: var(--accent-dark);
+
+  font-family:
+    Inter,
+    "DM Sans",
+    Arial,
+    sans-serif;
+
+  font-size: 8px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.15em;
+}
+
+.learning-note p {
+  max-width: 500px;
+
+  margin: 0;
+
+  color: #68636f;
+
+  font-family:
+    "Playfair Display",
+    Georgia,
+    serif;
+
+  font-size: 17px;
+
+  font-style: italic;
+
+  line-height: 1.4;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 750px) {
+
+  .certificates-section {
+    padding: 90px 0 100px;
+  }
+
+  .certificate-row {
+    grid-template-columns:
+      60px
+      minmax(0, 1fr)
+      70px;
+
+    gap: 18px;
+  }
+
+  .certificate-mark {
+    display: none;
+  }
+
+  .learning-note {
+    grid-template-columns: 1fr;
+
+    gap: 15px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .certificates-section {
+    padding: 75px 0 85px;
+  }
+
+  .certificates-header {
+    padding-bottom: 35px;
+  }
+
+  .certificates-header h2 {
+    font-size: 44px;
+  }
+
+  .certificate-row {
+    grid-template-columns:
+      42px
+      minmax(0, 1fr);
+
+    gap: 10px;
+
+    min-height: auto;
+
+    padding: 22px 0;
+  }
+
+  .certificate-title h3 {
+    font-size: 18px;
+  }
+
+  .certificate-title span {
+    font-size: 7px;
+  }
+
+  .certificate-view {
+    grid-column: 2;
+
+    justify-self: start;
+
+    margin-top: 4px;
+  }
+
+  .learning-note p {
+    font-size: 15px;
+  }
+}

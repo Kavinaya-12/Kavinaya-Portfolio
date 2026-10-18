@@ -1,33 +1,41 @@
 import React from "react";
-import Hero from "./components/Hero";
-import Projects from "./components/Projects";
-import Skills from "./components/Skills";
-import Achievements from "./components/Achievements";
-import Footer from "./components/Footer";
+import Navbar from "./components/Navbar/Navbar";
+import Hero from "./components/Hero/Hero";
+import Statement from "./components/Statement/Statement";
+import About from "./components/About/About";
+import Projects from "./components/Projects/Projects";
+import Publications from "./components/Publications/Publications";
+import Certificates from "./components/Certificates/Certificates";
+import Skills from "./components/Skills/Skills";
+import CredibilityStrip from "./components/CredibilityStrip/CredibilityStrip";
+import Achievements from "./components/Achievements/Achievements";
+import Journey from "./components/Journey/Journey";
+import Contact from "./components/Contact/Contact";
+import Footer from "./components/Footer/Footer";
+import ScrollExperience from "./components/ScrollExperience";
 import "./App.css";
-import '@fortawesome/fontawesome-free/css/all.min.css';
-import Timeline from "./components/TimeLine";
+import "@fortawesome/fontawesome-free/css/all.min.css";
 
-const App = () => {
-  return (
-    <div>
-      <div className="bg-decoration">
-        <div className="floating-shape shape-1"></div>
-        <div className="floating-shape shape-2"></div>
-        <div className="floating-shape shape-3"></div>
-      </div>
-
-      <div className="container">
-        <Hero />
-        <Timeline/>
-        <Projects />
-        <Skills />
-        <Achievements />
-      </div>
-
-      <Footer />
-    </div>
-  );
-};
+const App = () => (
+  <div className="page-shell">
+    <Navbar />
+    <main id="top">
+      <Hero />
+      <Statement />
+      <About />
+      <Projects />
+      <Publications />
+      <Certificates />
+      <Skills />
+      <Journey />
+      <CredibilityStrip />
+      <Achievements />
+      <Contact />
+    </main>
+    <a className="back-to-top" href="#top" aria-label="Back to top"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m2 21 20-9L2 3l3 8 11 1-11 1-3 8Z" /></svg></a>
+    <ScrollExperience />
+    <Footer />
+  </div>
+);
 
 export default App;

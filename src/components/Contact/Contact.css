@@ -1,0 +1,349 @@
+/* =========================================================
+   CONTACT — EDITORIAL CTA
+========================================================= */
+
+.contact-section {
+  padding: 95px 0 48px;
+
+  background: #17151b;
+
+  color: #faf8f5;
+}
+
+
+/* =========================================================
+   TOP LABEL
+========================================================= */
+
+.contact-section .editorial-section-label {
+  color: #aaa5b0;
+}
+
+.contact-section .editorial-section-label span:first-child {
+  color: var(--accent-dark);
+}
+
+
+/* =========================================================
+   MAIN HEADING
+========================================================= */
+
+.contact-heading {
+  margin-top: 50px;
+}
+
+.contact-heading h2 {
+  max-width: 950px;
+
+  margin: 0;
+
+  font-family:
+    "Playfair Display",
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: clamp(58px, 8vw, 115px);
+
+  font-weight: 500;
+
+  line-height: 0.9;
+
+  letter-spacing: -0.055em;
+}
+
+.contact-heading em {
+  color: #f5afd2;
+
+  font-style: italic;
+}
+
+
+/* =========================================================
+   CONTACT CONTENT
+========================================================= */
+
+.contact-content {
+  display: grid;
+
+  grid-template-columns:
+    minmax(250px, 0.8fr)
+    minmax(350px, 1.2fr);
+
+  gap: 100px;
+
+  margin-top: 42px;
+
+  padding-top: 35px;
+
+  border-top:
+    1px solid rgba(248, 246, 241, 0.18);
+}
+
+
+/* =========================================================
+   INTRO
+========================================================= */
+
+.contact-intro p {
+  max-width: 360px;
+
+  margin: 0;
+
+  color: #ddd9df;
+
+  font-family:
+    Inter,
+    "DM Sans",
+    Arial,
+    sans-serif;
+
+  font-size: 14px;
+
+  line-height: 1.8;
+}
+
+.contact-intro > span {
+  display: block;
+
+  margin-top: 30px;
+
+  color: var(--accent-dark);
+
+  font-family:
+    Inter,
+    "DM Sans",
+    Arial,
+    sans-serif;
+
+  font-size: 8px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.13em;
+
+  text-transform: uppercase;
+}
+
+
+/* =========================================================
+   LINKS
+========================================================= */
+
+.contact-links {
+  border-top:
+    1px solid rgba(248, 246, 241, 0.12);
+}
+
+.contact-link {
+  display: grid;
+
+  grid-template-columns:
+    85px
+    minmax(0, 1fr)
+    25px;
+
+  align-items: center;
+
+  gap: 20px;
+
+  min-height: 82px;
+
+  border-bottom:
+    1px solid rgba(248, 246, 241, 0.12);
+
+  color: inherit;
+
+  text-decoration: none;
+
+  transition:
+    padding 250ms ease,
+    color 250ms ease;
+}
+
+.contact-link > span:first-child {
+  color: #8d8892;
+
+  font-family:
+    Inter,
+    "DM Sans",
+    Arial,
+    sans-serif;
+
+  font-size: 8px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.13em;
+}
+
+.contact-link strong {
+  color: #faf8f5;
+
+  font-family:
+    "Playfair Display",
+    Georgia,
+    serif;
+
+  font-size: 19px;
+
+  font-weight: 400;
+}
+
+.contact-arrow {
+  color: var(--accent-dark);
+
+  font-family:
+    Inter,
+    "DM Sans",
+    Arial,
+    sans-serif;
+
+  font-size: 16px;
+
+  transition: transform 250ms ease;
+}
+
+.contact-link:hover {
+  padding-left: 10px;
+}
+
+.contact-link:hover .contact-arrow {
+  transform: translate(4px, -4px);
+}
+
+
+/* =========================================================
+   BOTTOM LINE
+========================================================= */
+
+.contact-bottom {
+  display: grid;
+
+  grid-template-columns: auto 1fr auto;
+
+  align-items: center;
+
+  gap: 20px;
+
+  margin-top: 42px;
+}
+
+.contact-bottom > span {
+  color: #77727d;
+
+  font-family:
+    Inter,
+    "DM Sans",
+    Arial,
+    sans-serif;
+
+  font-size: 7px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.15em;
+}
+
+.contact-bottom > span:first-child {
+  color: #f5afd2;
+}
+
+.contact-line {
+  height: 1px;
+
+  background:
+    rgba(248, 246, 241, 0.12);
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 800px) {
+
+  .contact-section {
+    padding: 78px 0 42px;
+  }
+
+  .contact-heading {
+    margin-top: 42px;
+  }
+
+  .contact-content {
+    grid-template-columns: 1fr;
+
+    gap: 55px;
+
+    margin-top: 50px;
+  }
+
+  .contact-intro p {
+    max-width: 500px;
+  }
+
+  .contact-bottom {
+    margin-top: 50px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .contact-section {
+    padding: 65px 0 35px;
+  }
+
+  .contact-heading {
+    margin-top: 50px;
+  }
+
+  .contact-heading h2 {
+    font-size: clamp(48px, 15vw, 72px);
+
+    line-height: 0.94;
+  }
+
+  .contact-content {
+    margin-top: 42px;
+
+    padding-top: 25px;
+
+    gap: 45px;
+  }
+
+  .contact-link {
+    grid-template-columns:
+      65px
+      minmax(0, 1fr)
+      20px;
+
+    gap: 10px;
+
+    min-height: 75px;
+  }
+
+  .contact-link strong {
+    font-size: 16px;
+
+    word-break: break-word;
+  }
+
+  .contact-bottom {
+    grid-template-columns:
+      1fr auto;
+
+    gap: 12px;
+
+    margin-top: 42px;
+  }
+
+  .contact-line {
+    display: none;
+  }
+}

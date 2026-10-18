@@ -1,0 +1,603 @@
+/* =========================================================
+   ABOUT — EDITORIAL STYLE
+========================================================= */
+
+.about-section {
+  padding: 110px 0 120px;
+  background: var(--bg, #faf8f5);
+  color: var(--text, #17151b);
+}
+
+
+/* =========================================================
+   COMMON EDITORIAL LABEL
+========================================================= */
+
+.editorial-section-label {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+
+  margin-bottom: 22px;
+
+  color: #77727d;
+
+  font-family:
+    Inter,
+    "DM Sans",
+    Arial,
+    sans-serif;
+
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.17em;
+  text-transform: uppercase;
+}
+
+.editorial-section-label span:first-child {
+  color: #17151b;
+
+  font-family:
+    "Playfair Display",
+    Georgia,
+    serif;
+
+  font-size: 13px;
+  font-weight: 500;
+
+  letter-spacing: 0;
+}
+
+
+/* =========================================================
+   ABOUT INTRO
+========================================================= */
+
+.about-intro {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    minmax(360px, 0.78fr);
+
+  gap: 80px;
+
+  padding-bottom: 95px;
+
+  border-bottom:
+    1px solid rgba(23, 21, 27, 0.15);
+}
+
+
+/* =========================================================
+   ABOUT COPY
+========================================================= */
+
+.about-copy {
+  max-width: 650px;
+}
+
+.about-copy h2,
+.about-approach h2 {
+  margin: 0;
+
+  color: #17151b;
+
+  font-family:
+    "Playfair Display",
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: clamp(42px, 4.5vw, 66px);
+
+  font-weight: 500;
+
+  line-height: 0.98;
+
+  letter-spacing: -0.045em;
+}
+
+.about-copy p {
+  max-width: 570px;
+
+  margin: 28px 0 0;
+
+  color: #68636f;
+
+  font-family:
+    Inter,
+    "DM Sans",
+    Arial,
+    sans-serif;
+
+  font-size: 14px;
+
+  line-height: 1.75;
+}
+
+.about-copy p + p {
+  margin-top: 18px;
+}
+
+
+/* =========================================================
+   TEXT LINK
+========================================================= */
+
+.about-text-link {
+  display: inline-block;
+
+  margin-top: 28px;
+
+  color: #17151b;
+
+  font-family:
+    Inter,
+    "DM Sans",
+    Arial,
+    sans-serif;
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  text-decoration: none;
+
+  border-bottom:
+    1px solid rgba(23, 21, 27, 0.3);
+
+  padding-bottom: 4px;
+
+  transition:
+    color 200ms ease,
+    border-color 200ms ease;
+}
+
+.about-text-link:hover {
+  color: var(--accent-dark);
+
+  border-color: var(--accent-dark);
+}
+
+
+/* =========================================================
+   ABOUT IMAGE
+========================================================= */
+
+.about-image-column {
+  align-self: start;
+}
+
+.editorial-image-placeholder {
+  width: 100%;
+
+  aspect-ratio: 0.92;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border:
+    1px solid rgba(23, 21, 27, 0.18);
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(129, 84, 216, 0.08),
+      rgba(23, 21, 27, 0.025)
+    );
+
+  text-align: center;
+}
+
+.editorial-image-placeholder span {
+  color: #45414a;
+
+  font-family:
+    "Playfair Display",
+    Georgia,
+    serif;
+
+  font-size: 20px;
+}
+
+.editorial-image-placeholder small {
+  margin-top: 8px;
+
+  color: #77727d;
+
+  font-family:
+    Inter,
+    "DM Sans",
+    Arial,
+    sans-serif;
+
+  font-size: 8px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.15em;
+}
+
+.editorial-image-caption {
+  display: flex;
+
+  justify-content: space-between;
+
+  padding-top: 8px;
+
+  color: #77727d;
+
+  font-family:
+    Inter,
+    "DM Sans",
+    Arial,
+    sans-serif;
+
+  font-size: 8px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.1em;
+}
+
+
+/* =========================================================
+   APPROACH
+========================================================= */
+
+.about-approach {
+  padding: 90px 0 95px;
+
+  border-bottom:
+    1px solid rgba(23, 21, 27, 0.15);
+}
+
+.about-approach h2 {
+  margin-bottom: 48px;
+}
+
+.approach-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+}
+
+.approach-item {
+  display: grid;
+
+  grid-template-columns: 38px 1fr;
+
+  gap: 18px;
+
+  min-height: 145px;
+
+  padding-right: 35px;
+}
+
+.approach-item + .approach-item {
+  padding-left: 35px;
+
+  border-left:
+    1px solid rgba(23, 21, 27, 0.15);
+}
+
+.approach-number {
+  color: var(--accent-dark);
+
+  font-family:
+    "Playfair Display",
+    Georgia,
+    serif;
+
+  font-size: 13px;
+}
+
+.approach-item h3 {
+  margin: 0;
+
+  color: #77727d;
+
+  font-family:
+    Inter,
+    "DM Sans",
+    Arial,
+    sans-serif;
+
+  font-size: 9px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.15em;
+}
+
+.approach-item p {
+  margin: 15px 0 0;
+
+  color: #68636f;
+
+  font-family:
+    Inter,
+    "DM Sans",
+    Arial,
+    sans-serif;
+
+  font-size: 12px;
+
+  line-height: 1.7;
+}
+
+
+/* =========================================================
+   EDUCATION
+========================================================= */
+
+.about-education {
+  display: grid;
+
+  grid-template-columns:
+    1fr
+    280px;
+
+  gap: 60px;
+
+  padding-top: 70px;
+}
+
+.education-content h3 {
+  margin: 0;
+
+  color: #17151b;
+
+  font-family:
+    "Playfair Display",
+    Georgia,
+    serif;
+
+  font-size: 25px;
+
+  font-weight: 500;
+}
+.education-list { display: grid; gap: 22px; max-width: 720px; }
+.education-entry + .education-entry { padding-top: 20px; border-top: 1px solid rgba(23, 21, 27, 0.13); }
+
+.education-content > p {
+  margin: 8px 0 0;
+
+  color: #68636f;
+
+  font-family:
+    Inter,
+    "DM Sans",
+    Arial,
+    sans-serif;
+
+  font-size: 11px;
+}
+
+.education-period {
+  display: block;
+
+  margin-top: 9px;
+
+  color: var(--accent-dark);
+
+  font-family:
+    Inter,
+    "DM Sans",
+    Arial,
+    sans-serif;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.08em;
+}
+
+.education-cgpa {
+  display: flex;
+
+  align-items: baseline;
+
+  gap: 15px;
+
+  margin-top: 28px;
+
+  padding-top: 16px;
+
+  border-top:
+    1px solid rgba(23, 21, 27, 0.13);
+
+  width: 180px;
+}
+
+.education-cgpa span {
+  color: #77727d;
+
+  font-family:
+    Inter,
+    "DM Sans",
+    Arial,
+    sans-serif;
+
+  font-size: 9px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.12em;
+}
+
+.education-cgpa strong {
+  color: #17151b;
+
+  font-family:
+    "Playfair Display",
+    Georgia,
+    serif;
+
+  font-size: 25px;
+
+  font-weight: 500;
+}
+
+
+/* =========================================================
+   EDUCATION IMAGE PLACEHOLDER
+========================================================= */
+
+.education-image-placeholder {
+  aspect-ratio: 1.2;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border:
+    1px solid rgba(23, 21, 27, 0.16);
+
+  background:
+    rgba(129, 84, 216, 0.045);
+
+  text-align: center;
+}
+
+.education-image-placeholder span {
+  color: #55515a;
+
+  font-family:
+    "Playfair Display",
+    Georgia,
+    serif;
+
+  font-size: 16px;
+}
+
+.education-image-placeholder small {
+  margin-top: 7px;
+
+  color: #77727d;
+
+  font-family:
+    Inter,
+    "DM Sans",
+    Arial,
+    sans-serif;
+
+  font-size: 7px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.14em;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .about-section {
+    padding-top: 90px;
+  }
+
+  .about-intro {
+    grid-template-columns: 1fr;
+
+    gap: 55px;
+  }
+
+  .about-image-column {
+    width: min(100%, 500px);
+
+    margin: 0 auto;
+  }
+
+  .approach-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .approach-item,
+  .approach-item + .approach-item {
+    padding: 24px 0;
+
+    border-left: 0;
+    border-top:
+      1px solid rgba(23, 21, 27, 0.13);
+  }
+
+  .approach-item:first-child {
+    border-top: 0;
+  }
+
+  .about-education {
+    grid-template-columns: 1fr;
+  }
+
+  .education-image-placeholder {
+    width: min(100%, 350px);
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .about-section {
+    padding: 75px 0 85px;
+  }
+
+  .about-intro {
+    gap: 40px;
+
+    padding-bottom: 70px;
+  }
+
+  .about-copy h2,
+  .about-approach h2 {
+    font-size: 43px;
+  }
+
+  .about-copy p {
+    font-size: 13px;
+  }
+
+  .about-approach {
+    padding: 70px 0;
+  }
+
+  .about-approach h2 {
+    margin-bottom: 25px;
+  }
+
+  .about-education {
+    padding-top: 55px;
+  }
+}
+
+.about-workspace-image {
+  width: 100%;
+  overflow: hidden;
+  background: var(--surface);
+}
+
+.about-workspace-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}

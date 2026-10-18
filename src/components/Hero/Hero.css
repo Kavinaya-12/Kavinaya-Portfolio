@@ -1,0 +1,327 @@
+/* =========================================================
+   HERO — EDITORIAL PORTFOLIO
+========================================================= */
+
+.hero-section {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  padding: 88px 0 72px;
+  background:
+    radial-gradient(ellipse at 82% 19%, rgba(195, 76, 145, 0.10), transparent 32%),
+    radial-gradient(ellipse at 72% 72%, rgba(129, 84, 216, 0.12), transparent 35%),
+    var(--bg, #faf8f5);
+  color: var(--text, #17151b);
+}
+
+.hero-section::before {
+  position: absolute;
+  z-index: -1;
+  top: 10%;
+  right: -8%;
+  width: min(54vw, 720px);
+  aspect-ratio: 1;
+  border: 1px solid rgba(129, 84, 216, 0.12);
+  border-radius: 50%;
+  content: "";
+  box-shadow: 0 0 0 42px rgba(129, 84, 216, 0.025), 0 0 0 84px rgba(195, 76, 145, 0.02);
+}
+
+/* =========================================================
+   MAIN HERO
+========================================================= */
+
+.hero-editorial {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(360px, 0.78fr);
+  align-items: center;
+  gap: 70px;
+  min-height: 600px;
+}
+
+/* =========================================================
+   LEFT CONTENT
+========================================================= */
+
+.hero-editorial-copy {
+  max-width: 610px;
+}
+
+.editorial-label {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 24px;
+  color: #6f6a73;
+  font-family: Inter, "DM Sans", Arial, sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.editorial-label span:first-child {
+  color: #17151b;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0;
+}
+
+.hero-editorial-copy h1 {
+  margin: 0;
+  color: #17151b;
+  font-family:
+    "Playfair Display",
+    Georgia,
+    "Times New Roman",
+    serif;
+  font-size: clamp(64px, 7vw, 108px);
+  font-weight: 500;
+  line-height: 0.9;
+  letter-spacing: -0.065em;
+}
+
+.hero-role {
+  margin-top: 26px;
+  color: #17151b;
+  font-family: Inter, "DM Sans", Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+}
+
+.hero-tech-line {
+  margin-top: 9px;
+  color: var(--accent-dark);
+  font-family: Inter, "DM Sans", Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.13em;
+}
+
+.hero-description {
+  max-width: 510px;
+  margin: 32px 0 0;
+  color: #68636f;
+  font-family: Inter, "DM Sans", Arial, sans-serif;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+/* =========================================================
+   HERO BUTTONS
+========================================================= */
+
+.hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 34px;
+}
+
+.editorial-primary-btn,
+.editorial-secondary-btn {
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 19px;
+  border-radius: 999px;
+  font-family: Inter, "DM Sans", Arial, sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  text-decoration: none;
+  letter-spacing: 0.01em;
+  transition:
+    transform 200ms ease,
+    background 200ms ease,
+    border-color 200ms ease;
+}
+
+.editorial-primary-btn {
+  border: 1px solid transparent;
+  background: linear-gradient(115deg, #6841bd, #9d4caa 75%, #bd538d);
+  color: #fff;
+  box-shadow: 0 12px 28px rgba(105, 65, 189, 0.2);
+}
+
+.editorial-secondary-btn {
+  border: 1px solid rgba(23, 21, 27, 0.22);
+  background: transparent;
+  color: #17151b;
+}
+
+.editorial-primary-btn:hover,
+.editorial-secondary-btn:hover {
+  transform: translateY(-2px);
+}
+
+.editorial-primary-btn:hover {
+  background: var(--accent-dark);
+  border-color: var(--accent-dark);
+}
+
+.editorial-secondary-btn:hover {
+  border-color: var(--accent-dark);
+}
+
+/* =========================================================
+   IMAGE PLACEHOLDER
+========================================================= */
+
+.hero-editorial-image {
+  position: relative;
+}
+
+.image-placeholder {
+  width: 100%;
+  aspect-ratio: 0.82;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(23, 21, 27, 0.18);
+  background:
+    linear-gradient(
+      135deg,
+      rgba(129, 84, 216, 0.08),
+      rgba(23, 21, 27, 0.025)
+    );
+  color: #77727d;
+  text-align: center;
+}
+
+.image-placeholder span {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 22px;
+  color: #45414a;
+}
+
+.image-placeholder small {
+  margin-top: 8px;
+  font-family: Inter, "DM Sans", Arial, sans-serif;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+}
+
+.image-caption {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 9px;
+  color: #77727d;
+  font-family: Inter, "DM Sans", Arial, sans-serif;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+  .hero-section {
+    padding-top: 60px;
+  }
+
+  .hero-editorial {
+    grid-template-columns: 1fr;
+    gap: 55px;
+    min-height: auto;
+  }
+
+  .hero-editorial-copy {
+    max-width: 680px;
+  }
+
+  .hero-editorial-copy h1 {
+    font-size: clamp(60px, 12vw, 92px);
+  }
+
+  .hero-editorial-image {
+    width: min(100%, 560px);
+    margin: 0 auto;
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+  .hero-section {
+    padding: 50px 0 0;
+  }
+
+  .hero-editorial {
+    gap: 42px;
+  }
+
+  .hero-editorial-copy h1 {
+    font-size: clamp(52px, 15vw, 76px);
+    line-height: 0.92;
+  }
+
+  .hero-role {
+    font-size: 11px;
+    letter-spacing: 0.13em;
+  }
+
+  .hero-tech-line {
+    font-size: 10px;
+  }
+
+  .hero-description {
+    margin-top: 26px;
+    font-size: 14px;
+  }
+
+  .hero-actions {
+    flex-wrap: wrap;
+    margin-top: 28px;
+  }
+}
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .editorial-primary-btn,
+  .editorial-secondary-btn {
+    transition: none;
+  }
+}
+
+.hero-portrait-frame {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  border-radius: 30px 30px 110px 30px;
+  background: linear-gradient(145deg, #eee7f8, #f7e9ef 58%, #f8f4eb);
+  box-shadow: 0 30px 75px rgba(61, 43, 83, 0.13), 0 3px 12px rgba(61, 43, 83, 0.06);
+}
+
+.hero-portrait {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  transition: transform 700ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.hero-portrait-frame:hover .hero-portrait { transform: scale(1.025); }
+
+@media (max-width: 900px) {
+  .hero-section { padding-bottom: 58px; }
+  .hero-section::before { top: 46%; right: -20%; width: min(80vw, 620px); }
+}
+
+@media (max-width: 600px) {
+  .hero-section { padding-bottom: 42px; }
+  .hero-section::before { top: 45%; right: -42%; width: 100vw; }
+  .hero-portrait-frame { border-radius: 22px 22px 75px 22px; }
+}

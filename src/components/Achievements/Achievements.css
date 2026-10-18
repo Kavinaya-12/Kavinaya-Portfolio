@@ -1,0 +1,346 @@
+/* =========================================================
+   ACHIEVEMENTS — EDITORIAL MILESTONES
+========================================================= */
+
+.achievements-section {
+  padding: 115px 0 125px;
+
+  background: var(--bg, #faf8f5);
+
+  color: var(--text, #17151b);
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.achievements-header {
+  max-width: 700px;
+
+  padding-bottom: 42px;
+
+  border-bottom:
+    1px solid rgba(23, 21, 27, 0.15);
+}
+
+.achievements-header h2 {
+  margin: 0;
+
+  color: #17151b;
+
+  font-family:
+    "Playfair Display",
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: clamp(45px, 5vw, 70px);
+
+  font-weight: 500;
+
+  line-height: 0.95;
+
+  letter-spacing: -0.05em;
+}
+
+.achievements-header p {
+  max-width: 500px;
+
+  margin: 18px 0 0;
+
+  color: #68636f;
+
+  font-family:
+    Inter,
+    "DM Sans",
+    Arial,
+    sans-serif;
+
+  font-size: 12px;
+
+  line-height: 1.7;
+}
+
+
+/* =========================================================
+   LIST
+========================================================= */
+
+.achievements-list {
+  border-bottom:
+    1px solid rgba(23, 21, 27, 0.15);
+}
+
+
+/* =========================================================
+   ROW
+========================================================= */
+
+.achievement-row {
+  display: grid;
+
+  grid-template-columns:
+    55px
+    minmax(0, 1fr)
+    170px;
+
+  align-items: center;
+
+  gap: 30px;
+
+  min-height: 125px;
+
+  padding: 25px 0;
+
+  border-bottom:
+    1px solid rgba(23, 21, 27, 0.1);
+}
+
+.achievement-row:last-child {
+  border-bottom: 0;
+}
+
+
+/* =========================================================
+   NUMBER
+========================================================= */
+
+.achievement-number {
+  color: var(--accent-dark);
+
+  font-family:
+    "Playfair Display",
+    Georgia,
+    serif;
+
+  font-size: 14px;
+}
+
+
+/* =========================================================
+   MAIN
+========================================================= */
+
+.achievement-main h3 {
+  margin: 0;
+
+  color: #17151b;
+
+  font-family:
+    "Playfair Display",
+    Georgia,
+    serif;
+
+  font-size: 22px;
+
+  font-weight: 500;
+
+  line-height: 1.1;
+}
+
+.achievement-main p {
+  max-width: 600px;
+
+  margin: 8px 0 0;
+
+  color: #68636f;
+
+  font-family:
+    Inter,
+    "DM Sans",
+    Arial,
+    sans-serif;
+
+  font-size: 10px;
+
+  line-height: 1.65;
+}
+
+
+/* =========================================================
+   RESULT
+========================================================= */
+
+.achievement-result {
+  justify-self: end;
+
+  color: var(--accent-dark);
+
+  font-family:
+    Inter,
+    "DM Sans",
+    Arial,
+    sans-serif;
+
+  font-size: 8px;
+
+  font-weight: 700;
+
+  line-height: 1.5;
+
+  letter-spacing: 0.12em;
+
+  text-align: right;
+}
+
+
+/* =========================================================
+   SUMMARY
+========================================================= */
+
+.achievement-summary {
+  display: flex;
+
+  align-items: center;
+
+  gap: 25px;
+
+  margin-top: 45px;
+
+  padding-top: 35px;
+
+  border-top:
+    1px solid rgba(23, 21, 27, 0.1);
+}
+
+.achievement-summary-number {
+  color: #17151b;
+
+  font-family:
+    "Playfair Display",
+    Georgia,
+    serif;
+
+  font-size: clamp(55px, 7vw, 90px);
+
+  font-weight: 500;
+
+  line-height: 0.8;
+
+  letter-spacing: -0.06em;
+}
+
+.achievement-summary-copy {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 7px;
+}
+
+.achievement-summary-copy span {
+  color: var(--accent-dark);
+
+  font-family:
+    Inter,
+    "DM Sans",
+    Arial,
+    sans-serif;
+
+  font-size: 8px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.14em;
+}
+
+.achievement-summary-copy p {
+  margin: 0;
+
+  color: #77727d;
+
+  font-family:
+    Inter,
+    "DM Sans",
+    Arial,
+    sans-serif;
+
+  font-size: 10px;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 750px) {
+
+  .achievements-section {
+    padding: 90px 0 100px;
+  }
+
+  .achievement-row {
+    grid-template-columns:
+      45px
+      minmax(0, 1fr);
+
+    gap: 18px;
+
+    padding: 25px 0;
+  }
+
+  .achievement-result {
+    grid-column: 2;
+
+    justify-self: start;
+
+    margin-top: 4px;
+
+    text-align: left;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .achievements-section {
+    padding: 75px 0 85px;
+  }
+
+  .achievements-header {
+    padding-bottom: 35px;
+  }
+
+  .achievements-header h2 {
+    font-size: 44px;
+  }
+
+  .achievement-row {
+    grid-template-columns:
+      35px
+      minmax(0, 1fr);
+
+    gap: 12px;
+
+    min-height: auto;
+
+    padding: 23px 0;
+  }
+
+  .achievement-number {
+    font-size: 12px;
+  }
+
+  .achievement-main h3 {
+    font-size: 19px;
+  }
+
+  .achievement-main p {
+    font-size: 10px;
+  }
+
+  .achievement-summary {
+    align-items: flex-start;
+
+    gap: 18px;
+  }
+
+  .achievement-summary-number {
+    font-size: 58px;
+  }
+}

@@ -1,0 +1,357 @@
+/* =========================================================
+   PUBLICATIONS — EDITORIAL RESEARCH SECTION
+========================================================= */
+
+.publications-section {
+  padding: 115px 0 125px;
+
+  background: var(--bg, #faf8f5);
+
+  color: var(--text, #17151b);
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.publications-header {
+  padding-bottom: 45px;
+
+  border-bottom:
+    1px solid rgba(23, 21, 27, 0.15);
+}
+
+.publications-header h2 {
+  margin: 0;
+
+  color: #17151b;
+
+  font-family:
+    "Playfair Display",
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: clamp(45px, 5vw, 70px);
+
+  font-weight: 500;
+
+  line-height: 0.95;
+
+  letter-spacing: -0.05em;
+}
+
+
+/* =========================================================
+   PUBLICATION LAYOUT
+========================================================= */
+
+.publication-editorial {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    minmax(350px, 0.72fr);
+
+  gap: 75px;
+
+  padding: 55px 0 25px;
+}
+
+
+/* =========================================================
+   PUBLICATION INFORMATION
+========================================================= */
+
+.publication-information {
+  max-width: 620px;
+}
+
+.publication-number {
+  color: var(--accent-dark);
+
+  font-family:
+    "Playfair Display",
+    Georgia,
+    serif;
+
+  font-size: 13px;
+}
+
+.publication-type {
+  margin-top: 10px;
+
+  color: #77727d;
+
+  font-family:
+    Inter,
+    "DM Sans",
+    Arial,
+    sans-serif;
+
+  font-size: 8px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.16em;
+}
+
+.publication-information h3 {
+  max-width: 620px;
+
+  margin: 16px 0 0;
+
+  color: #17151b;
+
+  font-family:
+    "Playfair Display",
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: clamp(31px, 3.3vw, 47px);
+
+  font-weight: 500;
+
+  line-height: 1.02;
+
+  letter-spacing: -0.04em;
+}
+
+.publication-meta {
+  margin-top: 14px;
+
+  color: var(--accent-dark);
+
+  font-family:
+    Inter,
+    "DM Sans",
+    Arial,
+    sans-serif;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.12em;
+}
+
+.publication-information p {
+  max-width: 570px;
+
+  margin: 25px 0 0;
+
+  color: #68636f;
+
+  font-family:
+    Inter,
+    "DM Sans",
+    Arial,
+    sans-serif;
+
+  font-size: 12px;
+
+  line-height: 1.8;
+}
+
+
+/* =========================================================
+   TAGS
+========================================================= */
+
+.publication-tags {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 8px 18px;
+
+  margin-top: 24px;
+}
+
+.publication-tags span {
+  color: #77727d;
+
+  font-family:
+    Inter,
+    "DM Sans",
+    Arial,
+    sans-serif;
+
+  font-size: 8px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.1em;
+}
+
+
+/* =========================================================
+   IEEE LINK
+========================================================= */
+
+.publication-link {
+  display: inline-flex;
+
+  margin-top: 28px;
+
+  padding-bottom: 5px;
+
+  border-bottom:
+    1px solid rgba(23, 21, 27, 0.3);
+
+  color: #17151b;
+
+  font-family:
+    Inter,
+    "DM Sans",
+    Arial,
+    sans-serif;
+
+  font-size: 9px;
+
+  font-weight: 700;
+
+  text-decoration: none;
+
+  transition:
+    color 200ms ease,
+    border-color 200ms ease;
+}
+
+.publication-link:hover {
+  color: var(--accent-dark);
+
+  border-color: var(--accent-dark);
+}
+
+
+/* =========================================================
+   IMAGE
+========================================================= */
+
+.publication-visual {
+  align-self: start;
+}
+
+.publication-image-placeholder {
+  width: 100%;
+
+  aspect-ratio: 1.15;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border:
+    1px solid rgba(23, 21, 27, 0.17);
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(129, 84, 216, 0.07),
+      rgba(23, 21, 27, 0.025)
+    );
+
+  text-align: center;
+}
+
+.publication-image-placeholder span {
+  color: #45414a;
+
+  font-family:
+    "Playfair Display",
+    Georgia,
+    serif;
+
+  font-size: 20px;
+}
+
+.publication-image-placeholder small {
+  margin-top: 9px;
+
+  color: #77727d;
+
+  font-family:
+    Inter,
+    "DM Sans",
+    Arial,
+    sans-serif;
+
+  font-size: 8px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.13em;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 850px) {
+
+  .publications-section {
+    padding: 90px 0 100px;
+  }
+
+  .publication-editorial {
+    grid-template-columns: 1fr;
+
+    gap: 40px;
+
+    padding-top: 45px;
+  }
+
+  .publication-information {
+    max-width: 700px;
+  }
+
+  .publication-visual {
+    width: min(100%, 600px);
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .publications-section {
+    padding: 75px 0 85px;
+  }
+
+  .publications-header {
+    padding-bottom: 35px;
+  }
+
+  .publications-header h2 {
+    font-size: 44px;
+  }
+
+  .publication-editorial {
+    padding-top: 38px;
+
+    gap: 30px;
+  }
+
+  .publication-information h3 {
+    font-size: 33px;
+  }
+
+  .publication-information p {
+    font-size: 11px;
+  }
+
+  .publication-image-placeholder {
+    aspect-ratio: 1.2;
+  }
+}
