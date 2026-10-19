@@ -1,4 +1,5 @@
 import React from "react";
+import { ArrowUp, Code2, Globe2, Mail } from "lucide-react";
 import "./Footer.css";
 
 const Footer = () => {
@@ -19,7 +20,7 @@ const Footer = () => {
 
         <div className="footer-links">
           <a href="mailto:kavinaya095@gmail.com">
-            EMAIL
+            <Mail className="footer-link-icon" aria-hidden="true" /> EMAIL
           </a>
 
           <a
@@ -27,7 +28,7 @@ const Footer = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            GITHUB
+            <Code2 className="footer-link-icon" aria-hidden="true" /> GITHUB
           </a>
 
           <a
@@ -35,7 +36,7 @@ const Footer = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            LINKEDIN
+            <Globe2 className="footer-link-icon" aria-hidden="true" /> LINKEDIN
           </a>
         </div>
 
@@ -43,7 +44,7 @@ const Footer = () => {
           <span>© 2026 KAVINAYA S</span>
 
           <a href="#top">
-            BACK TO TOP ↑
+            BACK TO TOP <ArrowUp className="ui-inline-icon" aria-hidden="true" />
           </a>
         </div>
 

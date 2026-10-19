@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from "react";
+import { ArrowUpRight } from "lucide-react";
+import resume from "../../assets/Kavinaya_Resume.pdf";
 import "./Navbar.css";
 
 const Navbar = () => {
@@ -44,12 +46,12 @@ const Navbar = () => {
         </nav>
 
         <a
-          href="/Kavinaya_Resume.pdf"
+          href={resume}
           target="_blank"
           rel="noopener noreferrer"
           className="navbar-resume"
         >
-          RESUME <span>↗</span>
+          RESUME <ArrowUpRight className="ui-inline-icon" aria-hidden="true" />
         </a>
 
         <button
@@ -96,12 +98,12 @@ const Navbar = () => {
         </a>
 
         <a
-          href="/Kavinaya_Resume.pdf"
+          href={resume}
           target="_blank"
           rel="noopener noreferrer"
           onClick={closeMenu}
         >
-          RESUME ↗
+          RESUME <ArrowUpRight className="ui-inline-icon" aria-hidden="true" />
         </a>
       </div>
     </header>

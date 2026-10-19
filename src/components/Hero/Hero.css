@@ -1,12 +1,10 @@
-/* =========================================================
-   HERO — EDITORIAL PORTFOLIO
-========================================================= */
 
 .hero-section {
   position: relative;
   isolation: isolate;
   overflow: hidden;
-  padding: 88px 0 72px;
+  padding: 88px 0 10px;
+  margin: 0;
   background:
     radial-gradient(ellipse at 82% 19%, rgba(195, 76, 145, 0.10), transparent 32%),
     radial-gradient(ellipse at 72% 72%, rgba(129, 84, 216, 0.12), transparent 35%),
@@ -27,10 +25,6 @@
   box-shadow: 0 0 0 42px rgba(129, 84, 216, 0.025), 0 0 0 84px rgba(195, 76, 145, 0.02);
 }
 
-/* =========================================================
-   MAIN HERO
-========================================================= */
-
 .hero-editorial {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(360px, 0.78fr);
@@ -38,10 +32,6 @@
   gap: 70px;
   min-height: 600px;
 }
-
-/* =========================================================
-   LEFT CONTENT
-========================================================= */
 
 .hero-editorial-copy {
   max-width: 610px;
@@ -109,10 +99,6 @@
   line-height: 1.7;
 }
 
-/* =========================================================
-   HERO BUTTONS
-========================================================= */
-
 .hero-actions {
   display: flex;
   align-items: center;
@@ -166,10 +152,6 @@
   border-color: var(--accent-dark);
 }
 
-/* =========================================================
-   IMAGE PLACEHOLDER
-========================================================= */
-
 .hero-editorial-image {
   position: relative;
 }
@@ -217,10 +199,6 @@
   letter-spacing: 0.12em;
 }
 
-/* =========================================================
-   TABLET
-========================================================= */
-
 @media (max-width: 900px) {
   .hero-section {
     padding-top: 60px;
@@ -245,10 +223,6 @@
     margin: 0 auto;
   }
 }
-
-/* =========================================================
-   MOBILE
-========================================================= */
 
 @media (max-width: 600px) {
   .hero-section {
@@ -283,10 +257,6 @@
     margin-top: 28px;
   }
 }
-
-/* =========================================================
-   REDUCED MOTION
-========================================================= */
 
 @media (prefers-reduced-motion: reduce) {
   .editorial-primary-btn,

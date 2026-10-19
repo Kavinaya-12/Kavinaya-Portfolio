@@ -1,7 +1,8 @@
 import React from "react";
-import { motion, useReducedMotion } from "framer-motion";
+import { motion as Motion, useReducedMotion } from "framer-motion";
+import { ArrowDown, ArrowUpRight } from "lucide-react";
 import resume from "../../assets/Kavinaya_Resume.pdf";
-import heroPortrait from "../../assets/hero-portrait.png";
+import heroPortrait from "../../assets/image.png";
 import "./Hero.css";
 
 const Hero = () => {
@@ -9,13 +10,14 @@ const Hero = () => {
 
   return (
     <section className="hero-section" id="home">
+      <div className="hero-god-rays" aria-hidden="true" />
+      <div className="hero-horizon-mist" aria-hidden="true" />
       <svg className="hero-sky-cloud hero-sky-cloud-one" viewBox="0 0 120 54" aria-hidden="true"><path d="M22 45C9 45 3 37 3 28c0-10 8-18 19-18 4 0 8 1 11 4C38 3 48 0 59 3c10 2 16 10 17 20 3-2 7-3 11-3 12 0 21 8 21 18 0 5-3 7-9 7H22Z"/></svg>
       <svg className="hero-sky-cloud hero-sky-cloud-two" viewBox="0 0 120 54" aria-hidden="true"><path d="M22 45C9 45 3 37 3 28c0-10 8-18 19-18 4 0 8 1 11 4C38 3 48 0 59 3c10 2 16 10 17 20 3-2 7-3 11-3 12 0 21 8 21 18 0 5-3 7-9 7H22Z"/></svg>
       <div className="container">
         <div className="hero-editorial">
 
-          {/* LEFT — CONTENT */}
-          <motion.div
+          <Motion.div
             className="hero-editorial-copy"
             initial={shouldReduceMotion ? false : { opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -51,7 +53,11 @@ const Hero = () => {
 
             <div className="hero-actions">
               <a href="#projects" className="editorial-primary-btn">
-                View My Work ↗
+                View My Work <ArrowUpRight className="ui-inline-icon" aria-hidden="true" />
+              </a>
+
+              <a href="#contact" className="editorial-secondary-btn">
+                Let&apos;s connect <ArrowUpRight className="ui-inline-icon" aria-hidden="true" />
               </a>
 
               <a
@@ -60,18 +66,17 @@ const Hero = () => {
                 rel="noopener noreferrer"
                 className="editorial-secondary-btn"
               >
-                Resume ↗
+                Resume <ArrowUpRight className="ui-inline-icon" aria-hidden="true" />
               </a>
             </div>
 
             <a className="hero-scroll-hint" href="#statement">
-              <span>Psst... scroll down · Scroll gently ☁️</span>
-              <span className="scroll-hint-arrow" aria-hidden="true">↓</span>
+              <span>Scroll to explore</span>
+              <ArrowDown className="scroll-hint-arrow" aria-hidden="true" />
             </a>
-          </motion.div>
+          </Motion.div>
 
-          {/* RIGHT — IMAGE PLACEHOLDER */}
-          <motion.div
+          <Motion.div
             className="hero-editorial-image"
             initial={shouldReduceMotion ? false : { opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -91,9 +96,9 @@ const Hero = () => {
 
             <div className="image-caption">
               <span>KAVINAYA S.</span>
-              <span>ECE → SOFTWARE</span>
+              <span>ECE / SOFTWARE</span>
             </div>
-          </motion.div>
+          </Motion.div>
 
         </div>
 

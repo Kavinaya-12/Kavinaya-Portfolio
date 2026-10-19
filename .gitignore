@@ -24,3 +24,15 @@ dist-ssr
 *.sw?
 
 screenshots/
+
+# Local secrets and deployment output
+.env
+.env.*
+!.env.example
+!.env.*.example
+.vercel/
+
+# Browser automation artifacts
+playwright-report/
+test-results/
+*.har

@@ -1,13 +1,14 @@
 import React from "react";
+import { Code2, Database, Layers3, PanelsTopLeft, Server, Wrench } from "lucide-react";
 import "./Skills.css";
 
 const categories = [
-  { title: "Languages", emoji: "🧠", tone: "pink", skills: [["Java", "☕"], ["JavaScript", "✨"], ["C", "🔹"]] },
-  { title: "Frontend", emoji: "🎨", tone: "butter", skills: [["React", "⚛️"], ["HTML", "🌐"], ["CSS", "🪄"], ["Bootstrap", "🧷"]] },
-  { title: "Backend", emoji: "🛠️", tone: "matcha", skills: [["Node.js", "🌱"], ["Express.js", "🚂"], ["Spring Boot", "🌷"], ["REST APIs", "🔌"]] },
-  { title: "Database", emoji: "🗂️", tone: "blue", skills: [["MongoDB", "🍃"], ["MySQL", "🐬"], ["SQL", "📚"]] },
-  { title: "Foundations", emoji: "🧩", tone: "lilac", skills: [["Data Structures & Algorithms", "🧠"], ["OOP", "🧱"], ["JWT Authentication", "🔐"], ["API Integration", "🧵"]] },
-  { title: "Tools", emoji: "🧰", tone: "cream", skills: [["Git / GitHub", "🐙"], ["VS Code", "💻"], ["MongoDB Compass", "🧭"], ["Eclipse", "🌘"], ["Creative Code", "🪄"]] },
+  { title: "Languages", Icon: Code2, tone: "pink", skills: ["Java", "JavaScript", "C"] },
+  { title: "Frontend", Icon: PanelsTopLeft, tone: "butter", skills: ["React", "HTML", "CSS", "Bootstrap"] },
+  { title: "Backend", Icon: Server, tone: "matcha", skills: ["Node.js", "Express.js", "Spring Boot", "REST APIs"] },
+  { title: "Database", Icon: Database, tone: "blue", skills: ["MongoDB", "MySQL", "SQL"] },
+  { title: "Foundations", Icon: Layers3, tone: "lilac", skills: ["Data Structures & Algorithms", "OOP", "JWT Authentication", "API Integration"] },
+  { title: "Tools", Icon: Wrench, tone: "cream", skills: ["Git / GitHub", "VS Code", "MongoDB Compass", "Eclipse", "Creative Code"] },
 ];
 
 const Skills = () => {
@@ -15,7 +16,7 @@ const Skills = () => {
     <section className="skills-section" id="skills">
       <div className="container">
         <div className="skills-header">
-          <div className="editorial-section-label"><span>06</span><span>SKILLS</span></div>
+          <div className="editorial-section-label"><span>03</span><span>SKILLS</span></div>
           <h2>Skills toolkit.</h2>
         </div>
 
@@ -25,14 +26,14 @@ const Skills = () => {
               className={`skill-bento-card skill-tone-${category.tone}`}
               key={category.title}
             >
-              <h3><span aria-hidden="true">{category.emoji}</span> {category.title}</h3>
+              <h3><category.Icon className="skill-category-icon" aria-hidden="true" /> {category.title}</h3>
               <div className="skill-bento-pills">
-                {category.skills.map(([skill, emoji]) => (
+                {category.skills.map((skill) => (
                   <span
                     className="skill-sticker-pill"
                     key={skill}
                   >
-                    <span aria-hidden="true">{emoji}</span> {skill}
+                    {skill}
                   </span>
                 ))}
               </div>

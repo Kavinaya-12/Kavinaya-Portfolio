@@ -1,5 +1,6 @@
 import React from "react";
-import { motion, useReducedMotion } from "framer-motion";
+import { motion as Motion, useReducedMotion } from "framer-motion";
+import { ArrowUpRight, Code2, Globe2, Mail } from "lucide-react";
 import "./Contact.css";
 
 const Contact = () => {
@@ -9,7 +10,7 @@ const Contact = () => {
     <section className="contact-section" id="contact">
       <div className="container">
 
-        <motion.div
+        <Motion.div
           className="contact-top"
           initial={shouldReduceMotion ? false : { opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -23,10 +24,9 @@ const Contact = () => {
             <span>09</span>
             <span>CONTACT</span>
           </div>
-        </motion.div>
+        </Motion.div>
 
-
-        <motion.div
+        <Motion.div
           className="contact-heading"
           initial={shouldReduceMotion ? false : { opacity: 0, y: 25 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -37,18 +37,16 @@ const Contact = () => {
             ease: [0.22, 1, 0.36, 1],
           }}
         >
-          <a href="mailto:kavinaya095@gmail.com" className="contact-talk contact-magnetic say-hi-button" onClick={(event) => { const button = event.currentTarget; button.classList.add("confetti-pop"); window.setTimeout(() => button.classList.remove("confetti-pop"), 700); }}>Say hi <span aria-hidden="true">↗</span><svg className="contact-starburst" viewBox="0 0 44 44" aria-hidden="true"><path d="M22 1v9m0 24v9M1 22h9m24 0h9M7.15 7.15l6.36 6.36m17 17 6.36 6.36m0-29.72-6.36 6.36m-17 17-6.36 6.36" /></svg></a>
+          <a href="mailto:kavinaya095@gmail.com" className="contact-talk contact-magnetic say-hi-button" onClick={(event) => { const button = event.currentTarget; button.classList.add("confetti-pop"); window.setTimeout(() => button.classList.remove("confetti-pop"), 700); }}>Say hi <ArrowUpRight className="contact-talk-icon" aria-hidden="true" /><svg className="contact-starburst" viewBox="0 0 44 44" aria-hidden="true"><path d="M22 1v9m0 24v9M1 22h9m24 0h9M7.15 7.15l6.36 6.36m17 17 6.36 6.36m0-29.72-6.36 6.36m-17 17-6.36 6.36" /></svg></a>
           <p className="contact-mantra">Let&apos;s work together.</p>
           <h2>
             Let&apos;s build
             <br />
             something <em>meaningful.</em>
           </h2>
-        </motion.div>
+        </Motion.div>
 
-
-
-        <motion.div
+        <Motion.div
           className="contact-content"
           initial={shouldReduceMotion ? false : { opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -71,18 +69,16 @@ const Contact = () => {
             </span>
           </div>
 
-
           <div className="contact-links">
 
             <a
               href="mailto:kavinaya095@gmail.com"
               className="contact-link"
             >
-              <span>EMAIL</span>
+              <span><Mail className="contact-link-icon" aria-hidden="true" /> EMAIL</span>
               <strong>kavinaya095@gmail.com</strong>
-              <span className="contact-arrow">↗</span>
+              <ArrowUpRight className="contact-arrow" aria-hidden="true" />
             </a>
-
 
             <a
               href="https://www.linkedin.com/in/kavinaya-subramaniam-4baa16259/"
@@ -90,11 +86,10 @@ const Contact = () => {
               rel="noopener noreferrer"
               className="contact-link"
             >
-              <span>LINKEDIN</span>
+              <span><Globe2 className="contact-link-icon" aria-hidden="true" /> LINKEDIN</span>
               <strong>Connect with me</strong>
-              <span className="contact-arrow">↗</span>
+              <ArrowUpRight className="contact-arrow" aria-hidden="true" />
             </a>
-
 
             <a
               href="https://github.com/Kavinaya-12/"
@@ -102,17 +97,16 @@ const Contact = () => {
               rel="noopener noreferrer"
               className="contact-link"
             >
-              <span>GITHUB</span>
+              <span><Code2 className="contact-link-icon" aria-hidden="true" /> GITHUB</span>
               <strong>View my work</strong>
-              <span className="contact-arrow">↗</span>
+              <ArrowUpRight className="contact-arrow" aria-hidden="true" />
             </a>
 
           </div>
 
-        </motion.div>
+        </Motion.div>
 
-
-        <motion.div
+        <Motion.div
           className="contact-bottom"
           initial={shouldReduceMotion ? false : { opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -127,7 +121,7 @@ const Contact = () => {
           <div className="contact-line"></div>
 
           <span>2026</span>
-        </motion.div>
+        </Motion.div>
 
       </div>
     </section>

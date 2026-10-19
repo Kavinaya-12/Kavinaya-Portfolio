@@ -14,7 +14,6 @@ import Contact from "./components/Contact/Contact";
 import Footer from "./components/Footer/Footer";
 import ScrollExperience from "./components/ScrollExperience";
 import "./App.css";
-import "@fortawesome/fontawesome-free/css/all.min.css";
 
 const App = () => (
   <div className="page-shell">
@@ -23,13 +22,13 @@ const App = () => (
       <Hero />
       <Statement />
       <About />
+      <Skills />
+      <Journey />
       <Projects />
       <Publications />
       <Certificates />
-      <Skills />
-      <Journey />
-      <CredibilityStrip />
       <Achievements />
+      <CredibilityStrip />
       <Contact />
     </main>
     <a className="back-to-top" href="#top" aria-label="Back to top"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m2 21 20-9L2 3l3 8 11 1-11 1-3 8Z" /></svg></a>

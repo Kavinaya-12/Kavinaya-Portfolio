@@ -1,5 +1,6 @@
 import React from "react";
-import { motion, useReducedMotion } from "framer-motion";
+import { motion as Motion, useReducedMotion } from "framer-motion";
+import { ArrowRight } from "lucide-react";
 import aboutWorkspace from "../../assets/about-workspace.png";
 import "./About.css";
 
@@ -10,11 +11,7 @@ const About = () => {
     <section className="about-section" id="about">
       <div className="container">
 
-        {/* =====================================================
-            ABOUT INTRO
-        ===================================================== */}
-
-        <motion.div
+        <Motion.div
           className="about-intro"
           initial={shouldReduceMotion ? false : { opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -25,11 +22,10 @@ const About = () => {
           }}
         >
 
-          {/* LEFT CONTENT */}
           <div className="about-copy">
 
             <div className="editorial-section-label">
-              <span>01</span>
+              <span>02</span>
               <span>ABOUT</span>
             </div>
 
@@ -62,12 +58,11 @@ const About = () => {
               href="#skills"
               className="about-text-link"
             >
-              Explore my skills →
+              Explore my skills <ArrowRight className="ui-inline-icon" aria-hidden="true" />
             </a>
 
           </div>
 
-          {/* RIGHT IMAGE PLACEHOLDER */}
           <div className="about-image-column">
 
            <div className="about-workspace-image">
@@ -85,14 +80,9 @@ const About = () => {
 
           </div>
 
-        </motion.div>
+        </Motion.div>
 
-
-        {/* =====================================================
-            APPROACH
-        ===================================================== */}
-
-        <motion.div
+        <Motion.div
           className="about-approach"
           initial={shouldReduceMotion ? false : { opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -106,7 +96,7 @@ const About = () => {
 
           <div className="editorial-section-label">
             <span>02</span>
-            <span>HOW I LIKE TO BUILD</span>
+            <span>✦ APPROACH</span>
           </div>
 
           <h2>
@@ -115,7 +105,6 @@ const About = () => {
 
           <div className="approach-grid">
 
-            {/* 01 */}
             <div className="approach-item">
 
               <span className="approach-number">
@@ -134,8 +123,6 @@ const About = () => {
 
             </div>
 
-
-            {/* 02 */}
             <div className="approach-item">
 
               <span className="approach-number">
@@ -154,8 +141,6 @@ const About = () => {
 
             </div>
 
-
-            {/* 03 */}
             <div className="approach-item">
 
               <span className="approach-number">
@@ -176,46 +161,7 @@ const About = () => {
 
           </div>
 
-        </motion.div>
-
-
-        {/* =====================================================
-            EDUCATION SNAPSHOT
-        ===================================================== */}
-
-        <motion.div
-          className="about-education"
-          initial={shouldReduceMotion ? false : { opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.15 }}
-          transition={{
-            duration: 0.7,
-            ease: [0.22, 1, 0.36, 1],
-          }}
-        >
-
-          <div className="education-content">
-
-            <div className="editorial-section-label">
-              <span>03</span>
-              <span>EDUCATION</span>
-            </div>
-
-            <div className="education-list">
-              <article className="education-entry"><h3>Sri Eshwar College of Engineering</h3><p>B.E. Electronics &amp; Communication Engineering</p><span className="education-period">2022-2026 | CGPA: 8.0</span></article>
-              <article className="education-entry"><h3>Rajalakshmi Genguswamy Matriculation Higher Secondary School</h3><p>Higher Secondary Certificate (HSC)</p><span className="education-period">2021-2022 | 78.8%</span></article>
-              <article className="education-entry"><h3>Rajalakshmi Genguswamy Matriculation Higher Secondary School</h3><p>Secondary School Leaving Certificate (SSLC)</p><span className="education-period">2019-2020 | 81%</span></article>
-            </div>
-          </div>
-
-
-          <div className="education-image-placeholder">
-            <span>CAMPUS / EDUCATION</span>
-            <small>IMAGE PLACEHOLDER</small>
-          </div>
-
-        </motion.div>
-
+        </Motion.div>
       </div>
     </section>
   );

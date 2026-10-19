@@ -1,5 +1,6 @@
 import React from "react";
-import { motion, useReducedMotion } from "framer-motion";
+import { motion as Motion, useReducedMotion } from "framer-motion";
+import { ExternalLink } from "lucide-react";
 import "./Certificates.css";
 
 const certificates = [
@@ -7,24 +8,29 @@ const certificates = [
     year: "2023",
     title: "Data Structures & Algorithms in C/C++",
     provider: "Udemy",
+    link: "https://drive.google.com/file/d/1h5Ntk0DuQGtAnV7b5pSUUQNa6EZDHx69/view?usp=drive_link",
   },
   {
     year: "2023",
     title: "Programming in Java",
     provider: "NPTEL",
+    link: "https://drive.google.com/file/d/1C8WAFnj9-VqdxDbFth5MuL1GsSOXOEEh/view?usp=drive_link",
   },
   {
     year: "2024",
     title: "SQL Intermediate",
     provider: "HackerRank",
+    link: "https://drive.google.com/file/d/1w2588KqkxdMum6xESbSq7E1b_PCQPmXG/view?usp=drive_link",
   },
   {
     year: "2024",
     title: "Cloud Computing",
     provider: "NPTEL",
+    link: "https://drive.google.com/file/d/13iy3RrpWoYn4q256NifsS11avz4bOWfR/view?usp=drive_link",
   },
   {
     year: "2025",
+    link: "https://drive.google.com/file/d/10H-Cs-pSWplYViXXBungXeU0glsNCBBE/view?usp=drive_link",
     title: "Introduction to Software Engineering",
     provider: "IBM · Coursera",
   },
@@ -37,11 +43,9 @@ const Certificates = () => {
     <section className="certificates-section" id="certificates">
       <div className="container">
 
-        {/* =====================================================
-            HEADER
-        ===================================================== */}
+        {}
 
-        <motion.div
+        <Motion.div
           className="certificates-header"
           initial={shouldReduceMotion ? false : { opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -52,7 +56,7 @@ const Certificates = () => {
           }}
         >
           <div className="editorial-section-label">
-            <span>08</span>
+            <span>07</span>
             <span>LEARNING</span>
           </div>
 
@@ -63,17 +67,14 @@ const Certificates = () => {
             my journey from fundamentals to software
             development.
           </p>
-        </motion.div>
+        </Motion.div>
 
-
-        {/* =====================================================
-            CERTIFICATE ARCHIVE
-        ===================================================== */}
+        {}
 
         <div className="certificates-list">
 
           {certificates.map((certificate, index) => (
-            <motion.article
+            <Motion.article
               className="certificate-row"
               key={`${certificate.year}-${certificate.title}`}
               initial={
@@ -106,27 +107,29 @@ const Certificates = () => {
                 CERTIFIED
               </div>
 
-              <button
-                type="button"
-                className="certificate-view"
-                onClick={() => {
-                  // Add certificate URL later.
-                }}
-              >
-                VIEW ↗
-              </button>
+              {certificate.link ? (
+                <a
+                  className="certificate-view"
+                  href={certificate.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  VIEW <ExternalLink className="ui-inline-icon" aria-hidden="true" />
+                </a>
+              ) : (
+                <span className="certificate-view certificate-view-unavailable" title="The credential URL was not provided">
+                  LINK UNAVAILABLE
+                </span>
+              )}
 
-            </motion.article>
+            </Motion.article>
           ))}
 
         </div>
 
+        {}
 
-        {/* =====================================================
-            LEARNING NOTE
-        ===================================================== */}
-
-        <motion.div
+        <Motion.div
           className="learning-note"
           initial={
             shouldReduceMotion
@@ -148,7 +151,7 @@ const Certificates = () => {
             Building is where the learning continues.
           </p>
 
-        </motion.div>
+        </Motion.div>
 
       </div>
     </section>

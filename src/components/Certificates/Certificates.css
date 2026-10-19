@@ -1,6 +1,3 @@
-/* =========================================================
-   CERTIFICATES — EDITORIAL ARCHIVE
-========================================================= */
 
 .certificates-section {
   padding: 115px 0 125px;
@@ -9,11 +6,6 @@
 
   color: var(--text, #17151b);
 }
-
-
-/* =========================================================
-   HEADER
-========================================================= */
 
 .certificates-header {
   max-width: 700px;
@@ -62,20 +54,10 @@
   line-height: 1.7;
 }
 
-
-/* =========================================================
-   ARCHIVE
-========================================================= */
-
 .certificates-list {
   border-bottom:
     1px solid rgba(23, 21, 27, 0.15);
 }
-
-
-/* =========================================================
-   CERTIFICATE ROW
-========================================================= */
 
 .certificate-row {
   display: grid;
@@ -96,16 +78,29 @@
 
   border-bottom:
     1px solid rgba(23, 21, 27, 0.1);
+
+  border-radius: 10px;
+  transition:
+    background-color 220ms ease,
+    transform 220ms ease,
+    border-color 220ms ease;
+}
+
+.certificate-row:hover,
+.certificate-row:focus-within {
+  background-color: rgba(255, 255, 255, 0.12);
+  border-bottom-color: rgba(88, 68, 117, 0.28);
+  transform: translateX(3px);
+}
+
+.certificate-row:focus-within {
+  outline: 2px solid color-mix(in srgb, var(--accent-dark) 45%, transparent);
+  outline-offset: 2px;
 }
 
 .certificate-row:last-child {
   border-bottom: 0;
 }
-
-
-/* =========================================================
-   YEAR
-========================================================= */
 
 .certificate-year {
   color: #77727d;
@@ -123,11 +118,6 @@
   letter-spacing: 0.08em;
 }
 
-
-/* =========================================================
-   TITLE
-========================================================= */
-
 .certificate-title h3 {
   margin: 0;
 
@@ -143,6 +133,12 @@
   font-weight: 500;
 
   line-height: 1.15;
+  transition: color 220ms ease;
+}
+
+.certificate-row:hover .certificate-title h3,
+.certificate-row:focus-within .certificate-title h3 {
+  color: var(--accent-dark);
 }
 
 .certificate-title span {
@@ -165,11 +161,6 @@
   letter-spacing: 0.1em;
 }
 
-
-/* =========================================================
-   CERTIFIED MARK
-========================================================= */
-
 .certificate-mark {
   color: #77727d;
 
@@ -187,11 +178,6 @@
 
   text-align: center;
 }
-
-
-/* =========================================================
-   VIEW
-========================================================= */
 
 .certificate-view {
   justify-self: end;
@@ -234,11 +220,6 @@
   border-color: var(--accent-dark);
 }
 
-
-/* =========================================================
-   LEARNING NOTE
-========================================================= */
-
 .learning-note {
   display: grid;
 
@@ -254,6 +235,13 @@
 
   border-top:
     1px solid rgba(23, 21, 27, 0.1);
+
+  border-radius: 8px;
+  transition: background-color 220ms ease, padding 220ms ease;
+}
+
+.learning-note:hover {
+  background: linear-gradient(100deg, rgba(255, 255, 255, 0.14), transparent 75%);
 }
 
 .learning-note > span {
@@ -291,11 +279,6 @@
   line-height: 1.4;
 }
 
-
-/* =========================================================
-   TABLET
-========================================================= */
-
 @media (max-width: 750px) {
 
   .certificates-section {
@@ -321,11 +304,6 @@
     gap: 15px;
   }
 }
-
-
-/* =========================================================
-   MOBILE
-========================================================= */
 
 @media (max-width: 600px) {
 
@@ -371,5 +349,18 @@
 
   .learning-note p {
     font-size: 15px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .certificate-row,
+  .certificate-title h3,
+  .learning-note {
+    transition: none;
+  }
+
+  .certificate-row:hover,
+  .certificate-row:focus-within {
+    transform: none;
   }
 }

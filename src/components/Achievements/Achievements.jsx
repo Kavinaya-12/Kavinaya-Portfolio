@@ -1,5 +1,5 @@
 import React from "react";
-import { motion, useReducedMotion } from "framer-motion";
+import { motion as Motion, useReducedMotion } from "framer-motion";
 import "./Achievements.css";
 
 const achievements = [
@@ -40,14 +40,6 @@ const achievements = [
   },
 ];
 
-const achievementCaptions = [
-  "A little plot twist.",
-  "Second place. Main character energy.",
-  "The reps add up.",
-  "Consistency has entered the chat.",
-  "Still warming up.",
-];
-
 const Achievements = () => {
   const shouldReduceMotion = useReducedMotion();
 
@@ -55,11 +47,9 @@ const Achievements = () => {
     <section className="achievements-section" id="achievements">
       <div className="container">
 
-        {/* =====================================================
-            HEADER
-        ===================================================== */}
+        {}
 
-        <motion.div
+        <Motion.div
           className="achievements-header"
           initial={shouldReduceMotion ? false : { opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -70,7 +60,7 @@ const Achievements = () => {
           }}
         >
           <div className="editorial-section-label">
-            <span>07</span>
+            <span>08</span>
             <span>ACHIEVEMENTS</span>
           </div>
 
@@ -81,17 +71,14 @@ const Achievements = () => {
             project showcases and continuous
             problem-solving practice.
           </p>
-        </motion.div>
+        </Motion.div>
 
-
-        {/* =====================================================
-            ACHIEVEMENT LIST
-        ===================================================== */}
+        {}
 
         <div className="achievements-list">
 
           {achievements.map((item, index) => (
-            <motion.article
+            <Motion.article
               className="achievement-row"
               key={item.number}
               initial={
@@ -127,14 +114,10 @@ const Achievements = () => {
                 {item.result}
               </div>
 
-              <span className="achievement-caption">{achievementCaptions[index]}</span>
-
-            </motion.article>
+            </Motion.article>
           ))}
 
         </div>
-
-
 
       </div>
     </section>
