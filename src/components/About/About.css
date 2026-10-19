@@ -246,6 +246,13 @@
   min-height: 145px;
 
   padding-right: 35px;
+  border-radius: 14px;
+  transition: background-color 220ms ease, translate 220ms ease;
+}
+
+.approach-item:hover {
+  translate: 0 -2px;
+  background: rgba(255, 255, 255, 0.3);
 }
 
 .approach-item + .approach-item {

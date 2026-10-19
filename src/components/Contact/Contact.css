@@ -180,7 +180,16 @@
   padding-left: 10px;
 }
 
+.contact-link:focus-visible {
+  padding-left: 10px;
+  color: #ffe3f0;
+}
+
 .contact-link:hover .contact-arrow {
+  transform: translate(4px, -4px);
+}
+
+.contact-link:focus-visible .contact-arrow {
   transform: translate(4px, -4px);
 }
 

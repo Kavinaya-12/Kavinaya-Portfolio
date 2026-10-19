@@ -1,330 +1,228 @@
-
 .achievements-section {
-  padding: 115px 0 125px;
-
-  background: var(--bg, #faf8f5);
-
-  color: var(--text, #17151b);
+  position: relative;
+  padding: 7rem 0 7.5rem;
+  color: var(--text);
 }
 
 .achievements-header {
   max-width: 700px;
-
-  padding-bottom: 42px;
-
-  border-bottom:
-    1px solid rgba(23, 21, 27, 0.15);
+  padding-bottom: 2.5rem;
+  border-bottom: 1px solid var(--line);
 }
 
 .achievements-header h2 {
   margin: 0;
-
-  color: #17151b;
-
-  font-family:
-    "Playfair Display",
-    Georgia,
-    "Times New Roman",
-    serif;
-
-  font-size: clamp(45px, 5vw, 70px);
-
+  color: var(--text);
+  font-family: var(--serif);
+  font-size: clamp(2.8rem, 5vw, 4.4rem);
   font-weight: 500;
-
-  line-height: 0.95;
-
-  letter-spacing: -0.05em;
+  line-height: 1;
+  letter-spacing: -0.045em;
 }
 
 .achievements-header p {
-  max-width: 500px;
-
-  margin: 18px 0 0;
-
-  color: #68636f;
-
-  font-family:
-    Inter,
-    "DM Sans",
-    Arial,
-    sans-serif;
-
-  font-size: 12px;
-
-  line-height: 1.7;
+  max-width: 34rem;
+  margin: 1.1rem 0 0;
+  color: var(--text-soft);
+  font-size: 0.95rem;
+  line-height: 1.75;
 }
 
-.achievements-list {
-  border-bottom:
-    1px solid rgba(23, 21, 27, 0.15);
-}
-
-.achievement-row {
+.progress-journey {
+  position: relative;
   display: grid;
+  gap: 1rem;
+  margin: 2.5rem 0 0;
+  padding: 0;
+  list-style: none;
+}
 
-  grid-template-columns:
-    55px
-    minmax(0, 1fr)
-    170px;
+.progress-journey::before {
+  position: absolute;
+  top: 1.5rem;
+  bottom: 1.5rem;
+  left: 8.05rem;
+  width: 1px;
+  background: linear-gradient(180deg, #e6bdd4, #a9c5e1 55%, #b9a8d8);
+  content: "";
+}
 
+.progress-milestone {
+  position: relative;
+  display: grid;
+  grid-template-columns: 5.25rem 2.8rem minmax(0, 1fr);
   align-items: center;
-
-  gap: 30px;
-
-  min-height: 125px;
-
-  padding: 25px 0;
-
-  border-bottom:
-    1px solid rgba(23, 21, 27, 0.1);
-
-  border-radius: 10px;
-  transition:
-    background-color 220ms ease,
-    transform 220ms ease,
-    border-color 220ms ease;
+  gap: 1.4rem;
+  min-width: 0;
 }
 
-.achievement-row:hover {
-  background-color: rgba(255, 255, 255, 0.12);
-  border-bottom-color: rgba(88, 68, 117, 0.28);
-  transform: translateX(3px);
+.progress-number {
+  justify-self: end;
+  color: #687f9f;
+  font-family: var(--serif);
+  font-size: 0.9rem;
+  font-variant-numeric: tabular-nums;
 }
 
-.achievement-row:last-child {
-  border-bottom: 0;
+.progress-marker {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  width: 2.7rem;
+  height: 2.7rem;
+  place-items: center;
+  border: 1px solid rgba(116, 145, 184, 0.28);
+  border-radius: 50%;
+  background: linear-gradient(145deg, #fff, #edf5ff);
+  box-shadow: 0 0 0 0.4rem rgba(255, 255, 255, 0.42);
+  color: #617fa8;
+  transition: color 220ms ease, background 220ms ease, box-shadow 220ms ease, scale 220ms ease;
 }
 
-.achievement-number {
-  color: var(--accent-dark);
-
-  font-family:
-    "Playfair Display",
-    Georgia,
-    serif;
-
-  font-size: 14px;
+.progress-marker svg {
+  width: 1.1rem;
+  height: 1.1rem;
+  stroke-width: 1.7;
 }
 
-.achievement-main h3 {
+.progress-card {
+  min-width: 0;
+  padding: 1.35rem 1.5rem;
+  border: 1px solid rgba(117, 145, 184, 0.18);
+  border-radius: 1.25rem;
+  background: linear-gradient(115deg, rgba(255, 255, 255, 0.68), rgba(244, 247, 255, 0.48));
+  box-shadow: 0 0.6rem 1.8rem rgba(71, 94, 137, 0.06);
+  transition: translate 240ms ease, border-color 240ms ease, box-shadow 240ms ease, background-color 240ms ease;
+}
+
+.progress-card-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.progress-category {
+  display: block;
+  margin-bottom: 0.35rem;
+  color: #7085a5;
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.progress-card h3 {
   margin: 0;
-
-  color: #17151b;
-
-  font-family:
-    "Playfair Display",
-    Georgia,
-    serif;
-
-  font-size: 22px;
-
+  color: var(--text);
+  font-family: var(--serif);
+  font-size: clamp(1.1rem, 2vw, 1.35rem);
   font-weight: 500;
-
-  line-height: 1.1;
+  line-height: 1.2;
   transition: color 220ms ease;
 }
 
-.achievement-row:hover .achievement-main h3 {
-  color: var(--accent-dark);
+.progress-result {
+  flex: 0 0 auto;
+  padding: 0.45rem 0.7rem;
+  border: 1px solid rgba(99, 127, 169, 0.2);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.56);
+  color: #45658f;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-align: center;
 }
 
-.achievement-row:hover .achievement-number {
-  color: #a06d9a;
-}
-
-.achievement-main p {
-  max-width: 600px;
-
-  margin: 8px 0 0;
-
-  color: #68636f;
-
-  font-family:
-    Inter,
-    "DM Sans",
-    Arial,
-    sans-serif;
-
-  font-size: 10px;
-
+.progress-card p {
+  max-width: 48rem;
+  margin: 0.65rem 0 0;
+  color: #586b87;
+  font-size: 0.88rem;
   line-height: 1.65;
 }
 
-.achievement-result {
-  justify-self: end;
-
-  color: var(--accent-dark);
-
-  font-family:
-    Inter,
-    "DM Sans",
-    Arial,
-    sans-serif;
-
-  font-size: 8px;
-
-  font-weight: 700;
-
-  line-height: 1.5;
-
-  letter-spacing: 0.12em;
-
-  text-align: right;
+.progress-milestone:hover .progress-card,
+.progress-milestone:focus-within .progress-card {
+  translate: 0 -3px;
+  border-color: rgba(112, 139, 181, 0.38);
+  background: linear-gradient(115deg, rgba(255, 255, 255, 0.82), rgba(236, 244, 255, 0.65));
+  box-shadow: 0 1rem 2.2rem rgba(71, 94, 137, 0.12);
 }
 
-.achievement-summary {
-  display: flex;
-
-  align-items: center;
-
-  gap: 25px;
-
-  margin-top: 45px;
-
-  padding-top: 35px;
-
-  border-top:
-    1px solid rgba(23, 21, 27, 0.1);
+.progress-milestone:hover .progress-marker,
+.progress-milestone:focus-within .progress-marker {
+  scale: 1.08;
+  border-color: rgba(112, 139, 181, 0.5);
+  background: linear-gradient(145deg, #fff, #e5efff);
+  box-shadow: 0 0 0 0.4rem rgba(255, 255, 255, 0.65), 0 0 1rem rgba(137, 165, 206, 0.3);
+  color: #826eac;
 }
 
-.achievement-summary-number {
-  color: #17151b;
-
-  font-family:
-    "Playfair Display",
-    Georgia,
-    serif;
-
-  font-size: clamp(55px, 7vw, 90px);
-
-  font-weight: 500;
-
-  line-height: 0.8;
-
-  letter-spacing: -0.06em;
+.progress-milestone:hover .progress-card h3,
+.progress-milestone:focus-within .progress-card h3 {
+  color: #65538f;
 }
 
-.achievement-summary-copy {
-  display: flex;
-
-  flex-direction: column;
-
-  gap: 7px;
-}
-
-.achievement-summary-copy span {
-  color: var(--accent-dark);
-
-  font-family:
-    Inter,
-    "DM Sans",
-    Arial,
-    sans-serif;
-
-  font-size: 8px;
-
-  font-weight: 700;
-
-  letter-spacing: 0.14em;
-}
-
-.achievement-summary-copy p {
-  margin: 0;
-
-  color: #77727d;
-
-  font-family:
-    Inter,
-    "DM Sans",
-    Arial,
-    sans-serif;
-
-  font-size: 10px;
-}
-
-@media (max-width: 750px) {
-
+@media (max-width: 700px) {
   .achievements-section {
-    padding: 90px 0 100px;
+    padding: 5rem 0;
   }
 
-  .achievement-row {
-    grid-template-columns:
-      45px
-      minmax(0, 1fr);
-
-    gap: 18px;
-
-    padding: 25px 0;
+  .progress-journey::before {
+    left: 1.15rem;
   }
 
-  .achievement-result {
-    grid-column: 2;
+  .progress-milestone {
+    grid-template-columns: 2.4rem minmax(0, 1fr);
+    gap: 0.85rem;
+  }
 
-    justify-self: start;
+  .progress-number {
+    display: none;
+  }
 
-    margin-top: 4px;
+  .progress-marker {
+    width: 2.4rem;
+    height: 2.4rem;
+  }
 
-    text-align: left;
+  .progress-card {
+    padding: 1.1rem;
   }
 }
 
-@media (max-width: 600px) {
-
-  .achievements-section {
-    padding: 75px 0 85px;
-  }
-
-  .achievements-header {
-    padding-bottom: 35px;
-  }
-
+@media (max-width: 480px) {
   .achievements-header h2 {
-    font-size: 44px;
+    font-size: clamp(2.5rem, 12vw, 3.4rem);
   }
 
-  .achievement-row {
-    grid-template-columns:
-      35px
-      minmax(0, 1fr);
-
-    gap: 12px;
-
-    min-height: auto;
-
-    padding: 23px 0;
-  }
-
-  .achievement-number {
-    font-size: 12px;
-  }
-
-  .achievement-main h3 {
-    font-size: 19px;
-  }
-
-  .achievement-main p {
-    font-size: 10px;
-  }
-
-  .achievement-summary {
+  .progress-card-heading {
     align-items: flex-start;
-
-    gap: 18px;
+    flex-direction: column;
+    gap: 0.65rem;
   }
 
-  .achievement-summary-number {
-    font-size: 58px;
+  .progress-result {
+    white-space: normal;
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .achievement-row,
-  .achievement-main h3 {
+  .progress-card,
+  .progress-marker,
+  .progress-card h3 {
     transition: none;
   }
 
-  .achievement-row:hover {
-    transform: none;
+  .progress-milestone:hover .progress-card,
+  .progress-milestone:focus-within .progress-card {
+    translate: none;
+  }
+
+  .progress-milestone:hover .progress-marker,
+  .progress-milestone:focus-within .progress-marker {
+    scale: 1;
   }
 }

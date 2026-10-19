@@ -96,6 +96,11 @@
   color: #f5afd2;
 }
 
+.footer-links a:focus-visible,
+.footer-bottom a:focus-visible {
+  color: #f5afd2;
+}
+
 .footer-bottom {
   display: flex;
 

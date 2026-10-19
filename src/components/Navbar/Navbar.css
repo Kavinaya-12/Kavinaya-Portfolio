@@ -105,6 +105,18 @@
   width: 100%;
 }
 
+.navbar-links a:focus-visible::after {
+  width: 100%;
+}
+
+.navbar-links a.active {
+  color: var(--accent-dark);
+}
+
+.navbar-links a.active::after {
+  width: 100%;
+}
+
 .navbar-resume {
   display: inline-flex;
 
@@ -273,6 +285,10 @@
     color: var(--accent-dark);
 
     border-bottom: 0;
+  }
+
+  .mobile-menu a:focus-visible {
+    color: var(--accent-dark);
   }
 
   .navbar-menu-button.active {

@@ -135,6 +135,13 @@
   max-width: 650px;
 
   padding-bottom: 5px;
+  transition: translate 220ms ease, border-color 220ms ease, box-shadow 220ms ease;
+}
+
+.journey-item:hover .journey-content {
+  translate: 0 -2px;
+  border-color: rgba(112, 139, 181, 0.34);
+  box-shadow: 0 0.9rem 2rem rgba(71, 94, 137, 0.1);
 }
 
 .journey-content h3 {
